@@ -1,0 +1,243 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(./assets/fonts/Poppins-Bold.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(./assets/fonts/Poppins-BoldItalic.ttf);
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(./assets/fonts/Poppins-Italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+body{
+  font-family: 'Poppins';
+  background-color: hsl(0, 0%, 94%);
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.container{
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+
+.content-container{
+  max-width: 60%;
+  max-height: 100%;
+  padding: 6.4rem;  
+  display: grid;
+  grid-template-columns:100%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem 2rem 20%;
+}
+
+.age-form{
+  max-width: 100%;
+  position: relative;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+  margin-bottom: 4.8rem;
+}
+
+.age-form ul{
+  margin-bottom: 4.2rem ;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 3.2rem;
+
+}
+
+.age-form ul li{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 20%;
+}
+
+.age-form ul li label{
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: hsl(0, 1%, 44%);
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+}
+
+.age-form ul li input{
+  height: 6.4rem;
+  padding: 1.2rem;
+  font-size: 3.2rem;
+  font-weight: 600; 
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.age-form ul li input:focus{
+  outline: none;
+  border-color: hsl(259, 100%, 65%);
+  caret-color: hsl(259, 100%, 65%);
+}
+
+.age-form button{
+  position: absolute;
+  right: 0;
+  transform: translateY(-50%);
+  border: none;
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.age-form button:hover{
+  background-color: hsl(0, 0%, 8%);
+}
+
+.display-age{
+  max-height: 100%;
+  font-size: 6.4rem;
+  font-weight: 800;
+  font-style: italic;
+  list-style: none;
+}
+
+.age-input{
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.age-input span{
+  color: hsl(259, 100%, 65%);
+}
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+@media (max-width:74em) {
+  html{
+    font-size: 50%;
+  }
+  .content-container{
+    max-width: 90%;
+    max-height: 100%;
+  }
+
+  .age-form{
+    margin-bottom: 12rem;
+  }
+
+  .age-form ul{
+    margin-bottom: 8rem ;
+    justify-content:center;
+  
+  }
+
+  .age-form ul li{
+
+    max-width: 30%;
+  }
+
+  .age-form button{
+    position: absolute;
+    right: 50%;
+    transform: translate(50%,-50%);
+    padding: 1.6rem;
+  }
+
+  .display-age{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media (max-width:29em) {
+  html{
+    font-size: 40%;
+  }
+
+  .content-container{
+    padding: 2.4rem;
+  }
+}
+
+
+/* **************** */
+/* ERROR STYLE */
+
+.error{
+  color: hsl(0, 100%, 67%) !important;
+}
+
+.error-border{
+  border-color:hsl(0, 100%, 67%) !important;
+  
+}
+
+.error-msg{
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-100%);
+  color: hsl(0, 100%, 67%);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+}
