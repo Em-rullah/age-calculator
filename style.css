@@ -63,6 +63,7 @@ body{
   margin: 0 auto;
   display: grid;
   grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr;
   justify-items: center;
   align-items: center;
 }
