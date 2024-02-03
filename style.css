@@ -67,7 +67,6 @@ body{
   align-items: center;
 }
 
-
 .content-container{
   max-width: 60%;
   max-height: 100%;
@@ -173,6 +172,10 @@ footer{
   html{
     font-size: 50%;
   }
+
+  h1{
+    text-align: center;
+  }
   .content-container{
     max-width: 90%;
     max-height: 100%;
@@ -205,6 +208,10 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .error-msg{
+    transform: translateY(-300%)!important;
   }
 
 }
