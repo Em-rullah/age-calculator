@@ -4,9 +4,9 @@ const inputDay = document.querySelector('.day-input');
 const inputMonth =document.querySelector('.month-input');
 const inputYear =document.querySelector('.year-input');
 const formBtn = document.querySelector('.submit-btn');
-const dayInputText = document.querySelector('.input-1-value');
+const yearInputText = document.querySelector('.input-1-value');
 const monthInputText=document.querySelector('.input-2-value');
-const yearInputText=document.querySelector('.input-3-value');
+const dayInputText=document.querySelector('.input-3-value');
 
 
 const daysInMonth = function(month, year){
@@ -121,7 +121,11 @@ const formHandle = function(){
       resultMonth =  curMonth - monthV;
       if(resultDay< 0){
         resultMonth--;
-      resultDay = computeMonthNum + resultDay;
+      resultDay += computeMonthNum;
+      }
+      if(resultMonth<0){
+        resultYear--;
+        resultMonth += 12;
       }
       dayInputText.textContent = resultDay;
       monthInputText.textContent = resultMonth;
